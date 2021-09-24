@@ -1,0 +1,176 @@
+C51 COMPILER V8.05a   BIDIRCOUNTER                                                         12/25/2020 22:11:16 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE BIDIRCOUNTER
+OBJECT MODULE PLACED IN BiDirCounter.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE BiDirCounter.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          
+   3          
+   4          sbit h=P1^6;              //ENTRANCE GATE
+   5          sbit g=P1^7;              //EXIT GATE
+   6          sbit r=P0^0;              // MOTOR #1
+   7          sbit s=P0^2;              // MOTOR #2
+   8          sbit t=P0^4;              // MOTOR #3
+   9          sbit u=P0^6;              // MOTOR #4
+  10          int m=0;
+  11          int n=0;
+  12          int a,b;                          //7 SEGMENT DISPLAY
+  13          int arr[10]={0x3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0XFF,0X67};
+  14          
+  15          
+  16          void main()              // MAIN PROGRAM STARTS
+  17          {
+  18   1      P2=0x3F;
+  19   1      P3=0x3F;
+  20   1      while(1)  // TO MAKE THE FUNCTION REPEAT FOREVER
+  21   1      {
+  22   2      P1=0xFF;   //INPUT PORT
+  23   2      
+  24   2      // IF SOMEONE COMES INSIDE
+  25   2      
+  26   2      if(h==0)             // IF ONE PERSON COMES IN
+  27   2               {
+  28   3                      if(n==99&&m==99)
+  29   3                      {
+  30   4                              P2=0x67;
+  31   4                              P3=0x67;
+  32   4                      }
+  33   3                              else
+  34   3                      {
+  35   4                               m=m+1;         // INCREMENT OF M BY 1
+  36   4                               n=n+1;         // INCREMENT OF N BY 1
+  37   4                               a=m/10;
+  38   4                               b=n%10;
+  39   4                               P2=arr[a];
+  40   4                               P3=arr[b];
+  41   4                      if(n==0)                // IF NOONE IS INSIDE
+  42   4                      {
+  43   5                              r=0;
+  44   5                              s=0;
+  45   5                              t=0;
+  46   5                              u=0;
+  47   5                      }
+  48   4                      else if(n>0&&n<=25)
+  49   4                      {
+  50   5                              r=1;
+  51   5                              s=0;
+  52   5                              t=0;
+  53   5                              u=0;
+  54   5                      }
+  55   4                      else if(n>25&&n<=50)
+C51 COMPILER V8.05a   BIDIRCOUNTER                                                         12/25/2020 22:11:16 PAGE 2   
+
+  56   4                      {
+  57   5                              r=1;
+  58   5                              s=1;
+  59   5                              t=0;
+  60   5                              u=0;
+  61   5                      }
+  62   4                      else if(n>50&&n<=75)
+  63   4                      {
+  64   5                              r=1;            
+  65   5                              s=1;
+  66   5                              t=1;
+  67   5                              u=0;
+  68   5                      }
+  69   4                      else if(n>75&&n<=100)
+  70   4                      {
+  71   5                              r=1;
+  72   5                              s=1;
+  73   5                              t=1;
+  74   5                              u=1;
+  75   5                      }
+  76   4                      while(h==0);
+  77   4                      }
+  78   3              }
+  79   2      
+  80   2                              
+  81   2      // IF SOMEONE COMES OUT
+  82   2      
+  83   2      if(g==0)
+  84   2      {
+  85   3      if(n==0&&m==0)
+  86   3      {
+  87   4      P2=0x3F;
+  88   4      P3=0x3F;
+  89   4      }
+  90   3      else
+  91   3      {
+  92   4      m=m-1;
+  93   4      n=n-1;
+  94   4      a=m/10;
+  95   4      b=n%10;
+  96   4      P2=arr[a];
+  97   4      P3=arr[b];
+  98   4         if(n==0) // IF NO ONE IS INSIDE
+  99   4         {
+ 100   5      r=0;
+ 101   5                              s=0;
+ 102   5                              t=0;
+ 103   5                              u=0;
+ 104   5                      }
+ 105   4                      else if(n>0&&n<=25)
+ 106   4                      {
+ 107   5                              r=1;
+ 108   5                              s=0;
+ 109   5                              t=0;
+ 110   5                              u=0;
+ 111   5                      }
+ 112   4                      else if(n>25&&n<=50)
+ 113   4                      {
+ 114   5                              r=1;
+ 115   5                              s=1;
+ 116   5                              t=0;
+ 117   5                              u=0;
+C51 COMPILER V8.05a   BIDIRCOUNTER                                                         12/25/2020 22:11:16 PAGE 3   
+
+ 118   5                      }
+ 119   4                      else if(n>50&&n<=75)
+ 120   4                      {
+ 121   5                              r=1;            
+ 122   5                              s=1;
+ 123   5                              t=1;
+ 124   5                              u=0;
+ 125   5                      }
+ 126   4                      else if(n>75&&n<=100)
+ 127   4                      {
+ 128   5                              r=1;
+ 129   5                              s=1;
+ 130   5                              t=1;
+ 131   5                              u=1;
+ 132   5                      }
+ 133   4      while(g==0);
+ 134   4      }
+ 135   3      
+ 136   3      }
+ 137   2      }
+ 138   1      }
+ 139          
+ 140          
+ 141                                  
+ 142                                  
+ 143                                  
+ 144                                  
+ 145                                  
+ 146                                  
+ 147                                                                                  
+ 148          
+ 149          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    507    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     28    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

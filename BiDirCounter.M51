@@ -1,0 +1,247 @@
+BL51 BANKED LINKER/LOCATER V6.02                                                        12/25/2020  22:11:16  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.02, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, BiDirCounter.obj TO BiDirCounter RAMSIZE (256) CODE (0X0000-0X1FFF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  BiDirCounter.obj (BIDIRCOUNTER)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  BiDirCounter (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     001CH     UNIT         ?DT?BIDIRCOUNTER
+            IDATA   0024H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     01FBH     UNIT         ?PR?MAIN?BIDIRCOUNTER
+            CODE    09FBH     008CH     UNIT         ?C_C51STARTUP
+            CODE    0A87H     008BH     UNIT         ?C?LIB_CODE
+            CODE    0B12H     001FH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   BiDirCounter (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?BIDIRCOUNTER
+  +--> ?C_INITSEG
+
+
+
+SYMBOL TABLE OF MODULE:  BiDirCounter (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:09FBH         SEGMENT       ?C_C51STARTUP
+  I:0024H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+BL51 BANKED LINKER/LOCATER V6.02                                                      12/25/2020  22:11:16  PAGE 2
+
+
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:09FEH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:09FBH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:09FBH         LINE#         133
+  C:09FDH         LINE#         134
+  C:09FEH         LINE#         135
+  C:09FFH         LINE#         136
+  C:0A01H         LINE#         185
+  C:0A04H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        BIDIRCOUNTER
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0800H         PUBLIC        main
+  D:0008H         PUBLIC        arr
+  D:001CH         PUBLIC        a
+  D:001EH         PUBLIC        b
+  B:0090H.7       PUBLIC        g
+  B:0090H.6       PUBLIC        h
+  D:0020H         PUBLIC        m
+  D:0022H         PUBLIC        n
+  B:0080H.0       PUBLIC        r
+  B:0080H.2       PUBLIC        s
+  B:0080H.4       PUBLIC        t
+  B:0080H.6       PUBLIC        u
+  -------         PROC          MAIN
+  C:0800H         LINE#         16
+  C:0800H         LINE#         17
+  C:0800H         LINE#         18
+  C:0800H         LINE#         19
+  C:0803H         LINE#         20
+  C:0803H         LINE#         21
+  C:0803H         LINE#         22
+  C:0806H         LINE#         26
+  C:080CH         LINE#         27
+BL51 BANKED LINKER/LOCATER V6.02                                                      12/25/2020  22:11:16  PAGE 3
+
+
+  C:080CH         LINE#         28
+  C:081CH         LINE#         29
+  C:081CH         LINE#         30
+  C:081FH         LINE#         31
+  C:0822H         LINE#         32
+  C:0825H         LINE#         34
+  C:0825H         LINE#         35
+  C:082DH         LINE#         36
+  C:0835H         LINE#         37
+  C:0844H         LINE#         38
+  C:0853H         LINE#         39
+  C:085EH         LINE#         40
+  C:0869H         LINE#         41
+  C:086FH         LINE#         42
+  C:086FH         LINE#         43
+  C:0871H         LINE#         44
+  C:0871H         LINE#         45
+  C:0871H         LINE#         46
+  C:0871H         LINE#         47
+  C:0873H         LINE#         48
+  C:088DH         LINE#         49
+  C:088DH         LINE#         50
+  C:088FH         LINE#         51
+  C:0891H         LINE#         52
+  C:0891H         LINE#         53
+  C:0891H         LINE#         54
+  C:0893H         LINE#         55
+  C:08ADH         LINE#         56
+  C:08ADH         LINE#         57
+  C:08AFH         LINE#         58
+  C:08B1H         LINE#         59
+  C:08B3H         LINE#         60
+  C:08B5H         LINE#         61
+  C:08B7H         LINE#         62
+  C:08D1H         LINE#         63
+  C:08D1H         LINE#         64
+  C:08D3H         LINE#         65
+  C:08D5H         LINE#         66
+  C:08D7H         LINE#         67
+  C:08D9H         LINE#         68
+  C:08DBH         LINE#         69
+  C:08F5H         LINE#         70
+  C:08F5H         LINE#         71
+  C:08F7H         LINE#         72
+  C:08F9H         LINE#         73
+  C:08FBH         LINE#         74
+  C:08FDH         LINE#         75
+  C:08FDH         LINE#         76
+  C:0900H         LINE#         77
+  C:0900H         LINE#         78
+  C:0900H         LINE#         83
+  C:0906H         LINE#         84
+  C:0906H         LINE#         85
+  C:0912H         LINE#         86
+  C:0912H         LINE#         87
+  C:0915H         LINE#         88
+  C:0918H         LINE#         89
+BL51 BANKED LINKER/LOCATER V6.02                                                      12/25/2020  22:11:16  PAGE 4
+
+
+  C:091BH         LINE#         91
+  C:091BH         LINE#         92
+  C:0923H         LINE#         93
+  C:092BH         LINE#         94
+  C:093AH         LINE#         95
+  C:0949H         LINE#         96
+  C:0954H         LINE#         97
+  C:095FH         LINE#         98
+  C:0965H         LINE#         99
+  C:0965H         LINE#         100
+  C:0967H         LINE#         101
+  C:0967H         LINE#         102
+  C:0967H         LINE#         103
+  C:0967H         LINE#         104
+  C:0969H         LINE#         105
+  C:0983H         LINE#         106
+  C:0983H         LINE#         107
+  C:0985H         LINE#         108
+  C:0987H         LINE#         109
+  C:0987H         LINE#         110
+  C:0987H         LINE#         111
+  C:0989H         LINE#         112
+  C:09A3H         LINE#         113
+  C:09A3H         LINE#         114
+  C:09A5H         LINE#         115
+  C:09A7H         LINE#         116
+  C:09A9H         LINE#         117
+  C:09ABH         LINE#         118
+  C:09ADH         LINE#         119
+  C:09C7H         LINE#         120
+  C:09C7H         LINE#         121
+  C:09C9H         LINE#         122
+  C:09CBH         LINE#         123
+  C:09CDH         LINE#         124
+  C:09CFH         LINE#         125
+  C:09D1H         LINE#         126
+  C:09EBH         LINE#         127
+  C:09EBH         LINE#         128
+  C:09EDH         LINE#         129
+  C:09EFH         LINE#         130
+  C:09F1H         LINE#         131
+  C:09F3H         LINE#         132
+  C:09F3H         LINE#         133
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        BIDIRCOUNTER
+
+  -------         MODULE        ?C?SIDIV
+  C:0A87H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?UIDIV
+  C:0ABDH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0228H BYTE (26%) *
+******************************************************************************
+BL51 BANKED LINKER/LOCATER V6.02                                                      12/25/2020  22:11:16  PAGE 5
+
+
+
+Program Size: data=37.0 xdata=0 code=820
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

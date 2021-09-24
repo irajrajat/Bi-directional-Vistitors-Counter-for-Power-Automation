@@ -1,0 +1,83 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Rajat Raj\Desktop\ADDC PROJECT\BiDirCounter.uv2
+Project File Date:  12/25/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+"BiDirCounter" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+"BiDirCounter" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+"BiDirCounter" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  ?C_START
+    MODULE:  STARTUP.obj (?C_STARTUP)
+    ADDRESS: 080AH
+Program Size: data=9.0 xdata=0 code=15
+"BiDirCounter" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling BiDirCounter.c...
+BIDIRCOUNTER.C(26): error C202: 'h': undefined identifier
+BIDIRCOUNTER.C(76): error C202: 'h': undefined identifier
+BIDIRCOUNTER.C(83): error C202: 'g': undefined identifier
+BIDIRCOUNTER.C(133): error C202: 'g': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling BiDirCounter.c...
+BIDIRCOUNTER.C(26): error C202: 'h': undefined identifier
+BIDIRCOUNTER.C(76): error C202: 'h': undefined identifier
+BIDIRCOUNTER.C(83): error C202: 'g': undefined identifier
+BIDIRCOUNTER.C(133): error C202: 'g': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling BiDirCounter.c...
+linking...
+Program Size: data=37.0 xdata=0 code=820
+"BiDirCounter" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=37.0 xdata=0 code=820
+"BiDirCounter" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling BiDirCounter.c...
+linking...
+Program Size: data=37.0 xdata=0 code=820
+creating hex file from "BiDirCounter"...
+"BiDirCounter" - 0 Error(s), 0 Warning(s).
